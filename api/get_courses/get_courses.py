@@ -7,14 +7,11 @@ log = logging.getLogger()
 log.setLevel(logging.DEBUG)
 
 def get_courses_handler(event):
-    body = {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "input": event
-    }
-
-    response = {
+    # Your code goes here!
+    e = event.get('e')
+    pi = event.get('pi')
+    return {
         "statusCode": 200,
-        "body": json.dumps(body)
+        "headers": { "Content-Type": "application/json"},
+        "body": e + pi
     }
-
-    return response
