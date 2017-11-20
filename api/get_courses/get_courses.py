@@ -1,5 +1,10 @@
+import os
 import json
 import boto3
+
+import logging
+log = logging.getLogger()
+log.setLevel(logging.DEBUG)
 
 def get_courses_handler(event):
     body = {
