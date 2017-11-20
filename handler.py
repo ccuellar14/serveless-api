@@ -1,5 +1,9 @@
 import json
+import boto3
 
+cnx = mysql.connector.connect(user='scott', password='tiger',
+                              host='127.0.0.1',
+                              database='employees')
 
 def hello(event, context):
     body = {
