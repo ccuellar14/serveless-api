@@ -4,6 +4,12 @@ frameworkVersion: ">=1.0.0 <2.0.0"
 
 custom:
   env: ${file(./env.yml)}
+  customDomain:
+    basePath: "/"
+    domainName: aulamejor.dotlabit.com
+    stage: dev
+    certificateName:
+    createRoute53Record: true
 
 provider:
   name: aws
@@ -39,3 +45,4 @@ functions:
 
 plugins:
   - serverless-python-requirements
+  - serverless-domain-manager
