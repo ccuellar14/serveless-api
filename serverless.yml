@@ -10,7 +10,7 @@ provider:
   runtime: python2.7
   region: us-west-2
   environment:
-    #mongoHost: ${self:custom.env.mongoHost}
+    mysqlHost: ${self:custom.env.mysqlHost}
 
 functions:
   get_courses:
