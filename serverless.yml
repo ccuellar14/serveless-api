@@ -10,12 +10,12 @@ provider:
   runtime: python2.7
   region: us-west-2
   environment:
-    mongoHost: ${self:custom.env.mongoHost}
+    #mongoHost: ${self:custom.env.mongoHost}
 
 functions:
-  get_cursos:
-    name: ${self:custom.env.stage}_aulamejor_api_get_cursos
-    handler: api/get_cursos/handler.main
+  get_courses:
+    name: ${self:custom.env.stage}_aulamejor_api_get_courses
+    handler: api/get_courses/handler.main
     description: Collect Courses Info
     events:
       - http:
@@ -24,18 +24,18 @@ functions:
           integration: lambda
           cors: true
 
-resources:
-  Resources:
-    ApiGatewayMethodInteractionidVarStatusGet:
-      Properties:
-        RequestParameters:
-          method.request.path.interaction_id: true
-        Integration:
-          RequestParameters:
-            integration.request.path.interaction_id: method.request.path.interaction_id
-          CacheNamespace: ApiGatewayMethodInteractionidVarStatusGetCacheNS
-          CacheKeyParameters: 
-            - method.request.path.interaction_id
+#resources:
+#  Resources:
+#    ApiGatewayMethodInteractionidVarStatusGet:
+#      Properties:
+#        RequestParameters:
+#          method.request.path.interaction_id: true
+#        Integration:
+#          RequestParameters:
+#            integration.request.path.interaction_id: method.request.path.interaction_id
+#          CacheNamespace: ApiGatewayMethodInteractionidVarStatusGetCacheNS
+#          CacheKeyParameters: 
+#            - method.request.path.interaction_id
 
 plugins:
   - serverless-python-requirements
