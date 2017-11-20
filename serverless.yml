@@ -5,7 +5,7 @@ frameworkVersion: ">=1.0.0 <2.0.0"
 custom:
   env: ${file(./env.yml)}
   customDomain:
-    basePath: "/"
+    basePath: ${self:custom.env.stage}
     domainName: aulamejor.dotlabit.com
     stage: dev
     certificateName:

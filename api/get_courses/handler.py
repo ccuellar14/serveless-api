@@ -1,4 +1,3 @@
-from __future__ import print_function
 import json
 import logging
 from api.get_courses.get_courses import get_courses_handler
