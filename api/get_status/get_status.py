@@ -7,4 +7,4 @@ log.setLevel(logging.DEBUG)
 
 def get_status_handler(event):
     
-    return {'response': 'ok'}
+    return {'response': 'This root API'}
