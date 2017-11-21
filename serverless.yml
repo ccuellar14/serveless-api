@@ -30,6 +30,17 @@ functions:
           integration: lambda
           cors: true
 
+  get_status:
+    name: ${self:custom.env.stage}_aulamejor_api_get_status
+    handler: api/get_status/handler.main
+    description: Collect Courses Info
+    events:
+      - http:
+          path: /
+          method: get
+          integration: lambda
+          cors: true
+
 #resources:
 #  Resources:
 #    ApiGatewayMethodInteractionidVarStatusGet:
