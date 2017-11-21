@@ -15,7 +15,8 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-*pyc
+*.pyc
+env.yml
 
 # Serverless directories
 .serverless
